@@ -17,9 +17,11 @@ public class FeaturesConfigTest {
     FeaturesConfig featuresConfig;
 
     @Test
+    @TestConfigProperty(key = "fantastic-feature-enabled", value = "true")
     void test() {
 
         assertFalse(featuresConfig.isAwesomeFeatureEnabled());
         assertTrue(featuresConfig.isAmazingFeatureEnabled());
+        assertTrue(featuresConfig.isFantasticFeatureEnabled());
     }
 }

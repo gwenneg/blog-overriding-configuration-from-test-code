@@ -12,11 +12,18 @@ public class FeaturesConfig {
     @ConfigProperty(name = "amazing-feature-enabled", defaultValue = "false")
     boolean amazingFeatureEnabled;
 
+    @ConfigProperty(name = "fantastic-feature-enabled", defaultValue = "false")
+    boolean fantasticFeatureEnabled;
+
     public boolean isAwesomeFeatureEnabled() {
         return awesomeFeatureEnabled;
     }
 
     public boolean isAmazingFeatureEnabled() {
         return amazingFeatureEnabled;
+    }
+
+    public boolean isFantasticFeatureEnabled() {
+        return fantasticFeatureEnabled;
     }
 }
