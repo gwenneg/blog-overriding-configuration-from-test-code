@@ -8,21 +8,19 @@ import org.eclipse.microprofile.config.inject.ConfigProperty;
 @Path("/features")
 public class FeaturesResource {
 
-    public static final String AWESOME_FEATURE_ENABLED = "awesome-feature-enabled";
-
-    @ConfigProperty(name = AWESOME_FEATURE_ENABLED, defaultValue = "false")
-    boolean awesomeFeatureEnabled;
+    @Inject
+    FeaturesConfigMapping featuresConfigMapping;
 
     @Inject
     FeaturesConfig featuresConfig;
 
-    @Inject
-    FeaturesConfigMapping featuresConfigMapping;
+    @ConfigProperty(name = "fantastic-feature-enabled", defaultValue = "false")
+    boolean fantasticFeatureEnabled;
 
     @GET
     @Path("/awesome")
     public boolean isAwesomeFeatureEnabled() {
-        return awesomeFeatureEnabled;
+        return featuresConfigMapping.awesomeFeatureEnabled();
     }
 
     @GET
@@ -34,6 +32,6 @@ public class FeaturesResource {
     @GET
     @Path("/fantastic")
     public boolean isFantasticFeatureEnabled() {
-        return featuresConfigMapping.fantasticFeatureEnabled();
+        return fantasticFeatureEnabled;
     }
 }

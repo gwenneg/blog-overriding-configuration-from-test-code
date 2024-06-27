@@ -7,5 +7,5 @@ import io.smallrye.config.WithDefault;
 public interface FeaturesConfigMapping {
 
     @WithDefault("false")
-    boolean fantasticFeatureEnabled();
+    boolean awesomeFeatureEnabled();
 }
