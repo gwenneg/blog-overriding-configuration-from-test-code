@@ -12,7 +12,6 @@
     <modules>
         <module>component-test</module>
         <module>constructor-injection</module>
-        <module>config-mapping</module>
         <module>inject-mock</module>
         <module>system-property</module>
         <module>test-profile</module>
