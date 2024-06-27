@@ -1,26 +1,24 @@
 package com.gwenneg.blog.config;
 
 import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.inject.Inject;
 import org.eclipse.microprofile.config.inject.ConfigProperty;
 
 @ApplicationScoped
-public class FeaturesConfig {
+public class FeaturesService {
 
-    @ConfigProperty(name = "awesome-feature-enabled", defaultValue = "false")
-    boolean awesomeFeatureEnabled;
-
-    @ConfigProperty(name = "amazing-feature-enabled", defaultValue = "false")
-    boolean amazingFeatureEnabled;
+    @Inject
+    FeaturesConfigMapping featuresConfigMapping;
 
     @ConfigProperty(name = "fantastic-feature-enabled", defaultValue = "false")
     boolean fantasticFeatureEnabled;
 
     public boolean isAwesomeFeatureEnabled() {
-        return awesomeFeatureEnabled;
+        return featuresConfigMapping.awesomeFeatureEnabled();
     }
 
     public boolean isAmazingFeatureEnabled() {
-        return amazingFeatureEnabled;
+        return featuresConfigMapping.amazingFeatureEnabled();
     }
 
     public boolean isFantasticFeatureEnabled() {

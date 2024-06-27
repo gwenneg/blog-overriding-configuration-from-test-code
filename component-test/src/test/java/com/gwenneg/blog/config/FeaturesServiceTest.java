@@ -9,19 +9,19 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @QuarkusComponentTest
-@TestConfigProperty(key = "amazing-feature-enabled", value = "true")
-public class FeaturesConfigTest {
+@TestConfigProperty(key = "features.amazing-feature-enabled", value = "true")
+public class FeaturesServiceTest {
 
     // This line will cause a test failure if run in native mode because @Inject is not supported in tests annotated with @QuarkusIntegrationTest.
     @Inject
-    FeaturesConfig featuresConfig;
+    FeaturesService featuresService;
 
     @Test
     @TestConfigProperty(key = "fantastic-feature-enabled", value = "true")
     void test() {
 
-        assertFalse(featuresConfig.isAwesomeFeatureEnabled());
-        assertTrue(featuresConfig.isAmazingFeatureEnabled());
-        assertTrue(featuresConfig.isFantasticFeatureEnabled());
+        assertFalse(featuresService.isAwesomeFeatureEnabled());
+        assertTrue(featuresService.isAmazingFeatureEnabled());
+        assertTrue(featuresService.isFantasticFeatureEnabled());
     }
 }
