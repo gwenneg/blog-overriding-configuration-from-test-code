@@ -36,7 +36,6 @@ You can build and test everything with a single command: `./mvnw clean install -
 Or you can only build the module you're interested in:
 
 - `./mvnw clean install -pl :component-test`
-- `./mvnw clean install -pl :config-mapping`
 - `./mvnw clean install -pl :constructor-injection`
 - `./mvnw clean install -pl :inject-mock`
 - `./mvnw clean install -pl :system-property`
