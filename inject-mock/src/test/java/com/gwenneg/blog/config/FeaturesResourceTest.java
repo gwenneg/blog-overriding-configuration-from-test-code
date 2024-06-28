@@ -7,7 +7,6 @@ import io.smallrye.config.SmallRyeConfig;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.enterprise.inject.Produces;
 import jakarta.inject.Inject;
-import org.eclipse.microprofile.config.Config;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 
@@ -18,13 +17,13 @@ import static org.hamcrest.CoreMatchers.is;
 class FeaturesResourceTest {
 
     @Inject
-    Config config;
+    SmallRyeConfig smallRyeConfig;
 
     @Produces // Optional
     @ApplicationScoped
     @Mock
     FeaturesConfigMapping featuresConfig() {
-        return config.unwrap(SmallRyeConfig.class).getConfigMapping(FeaturesConfigMapping.class);
+        return smallRyeConfig.getConfigMapping(FeaturesConfigMapping.class);
     }
 
     @InjectMock
