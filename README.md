@@ -38,6 +38,7 @@ Or you can only build the module you're interested in:
 - `./mvnw clean install -pl :component-test`
 - `./mvnw clean install -pl :constructor-injection`
 - `./mvnw clean install -pl :inject-mock`
+- `./mvnw clean install -pl :profile-aware-file`
 - `./mvnw clean install -pl :system-property`
 - `./mvnw clean install -pl :test-profile`
 

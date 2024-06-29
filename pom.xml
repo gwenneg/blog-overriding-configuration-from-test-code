@@ -13,6 +13,7 @@
         <module>component-test</module>
         <module>constructor-injection</module>
         <module>inject-mock</module>
+        <module>profile-aware-file</module>
         <module>system-property</module>
         <module>test-profile</module>
     </modules>
