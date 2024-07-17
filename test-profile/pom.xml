@@ -8,7 +8,7 @@
 
     <parent>
         <groupId>com.gwenneg.blog</groupId>
-        <artifactId>mock-config-property</artifactId>
+        <artifactId>overriding-configuration-from-test-code</artifactId>
         <version>1.0.0-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
